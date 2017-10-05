@@ -15,7 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ThirdPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private navCtrl: NavController, private navParams: NavParams) {
+  }
+
+  setRootPageToHome(){
+    this.navCtrl.setRoot('HomePage');
   }
 
   ionViewDidLoad() {
