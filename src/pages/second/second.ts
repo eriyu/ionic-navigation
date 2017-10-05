@@ -21,6 +21,10 @@ export class SecondPage {
     this.msg = this.navParams.get('message');
   }
 
+  backToHomepage(){
+    this.navCtrl.pop();
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad SecondPage');
   }
