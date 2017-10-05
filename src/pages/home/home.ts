@@ -13,7 +13,9 @@ export class HomePage {
   }
 
   navigateToSecondPage() {
-    this.navCtrl.push('SecondPage');
+    this.navCtrl.push('SecondPage',{
+      message:'from homepage'
+    });
   }
 
   navigateToAboutPage() {
