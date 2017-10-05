@@ -12,8 +12,8 @@ export class HomePage {
 
   }
 
-  navigateToSecondPage(){
-    this.navCtrl.push('SecondPage');
+  navigateToAboutPage() {
+    this.navCtrl.push('AboutPage');
   }
 
 }
