@@ -22,11 +22,17 @@ export class SecondPage {
   }
 
   backToHomepage(){
-    this.navCtrl.pop();
+    this.navCtrl.pop({
+      animate:true,
+      animation:'wp-transition'
+    });
   }
 
   navigateToThirdPage(){
-    this.navCtrl.push('ThirdPage');
+    this.navCtrl.push('ThirdPage',null,{
+      animate:true,
+      animation:'md-transition'
+    });
   }
 
   ionViewDidLoad() {
