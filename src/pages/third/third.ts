@@ -15,7 +15,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ThirdPage {
 
+  pageCanEnter:boolean = true;
+
   constructor(private navCtrl: NavController, private navParams: NavParams) {
+    this.pageCanEnter = this.navParams.get('pageCanEnter');
   }
 
   setRootPageToHome(){
@@ -44,6 +47,10 @@ export class ThirdPage {
 
   ionViewWillUnload() {
     console.log('ionViewWillUnload ThirdPage');
+  }
+
+  ionViewCanEnter(){
+    return this.pageCanEnter;
   }
 
 }

@@ -17,6 +17,7 @@ export class SecondPage {
 
   msg:string;
   pageCanLeave:boolean = true;
+  thirdPageCanEnter:boolean = true;
 
   constructor(private navCtrl: NavController, private navParams: NavParams) {
     this.msg = this.navParams.get('message');
@@ -30,10 +31,16 @@ export class SecondPage {
   }
 
   navigateToThirdPage(){
-    this.navCtrl.push('ThirdPage',null,{
-      animate:true,
-      animation:'ios-transition'
-    });
+    this.navCtrl.push(
+      'ThirdPage',
+      {
+        pageCanEnter:this.thirdPageCanEnter
+      },
+      {
+        animate:true,
+        animation:'ios-transition'
+      }
+    );
   }
 
   ionViewDidLoad() {
@@ -66,6 +73,10 @@ export class SecondPage {
 
   ionViewCanLeave(){
     return this.pageCanLeave;
+  }
+
+  toggleThirdPageCanEnter(){
+    this.thirdPageCanEnter = !this.thirdPageCanEnter;
   }
 
 }
