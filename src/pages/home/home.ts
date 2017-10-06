@@ -22,4 +22,28 @@ export class HomePage {
     this.navCtrl.push('AboutPage');
   }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
+  }
+
+  ionViewWillEnter() {
+    console.log('ionViewWillEnter HomePage');
+  }
+
+  ionViewDidEnter() {
+    console.log('ionViewDidEnter HomePage');
+  }
+
+  ionViewWillLeave() {
+    console.log('ionViewWillLeave HomePage');
+  }
+
+  ionViewDidLeave() {
+    console.log('ionViewDidLeave HomePage');
+  }
+
+  ionViewWillUnload() {
+    console.log('ionViewWillUnload HomePage');
+  }
+
 }

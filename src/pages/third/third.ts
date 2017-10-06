@@ -26,4 +26,24 @@ export class ThirdPage {
     console.log('ionViewDidLoad ThirdPage');
   }
 
+  ionViewWillEnter() {
+    console.log('ionViewWillEnter ThirdPage');
+  }
+
+  ionViewDidEnter() {
+    console.log('ionViewDidEnter ThirdPage');
+  }
+
+  ionViewWillLeave() {
+    console.log('ionViewWillLeave ThirdPage');
+  }
+
+  ionViewDidLeave() {
+    console.log('ionViewDidLeave ThirdPage');
+  }
+
+  ionViewWillUnload() {
+    console.log('ionViewWillUnload ThirdPage');
+  }
+
 }

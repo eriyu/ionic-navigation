@@ -31,12 +31,34 @@ export class SecondPage {
   navigateToThirdPage(){
     this.navCtrl.push('ThirdPage',null,{
       animate:true,
-      animation:'md-transition'
+      animation:'ios-transition'
     });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SecondPage');
   }
+
+  ionViewWillEnter() {
+    console.log('ionViewWillEnter SecondPage');
+  }
+
+  ionViewDidEnter() {
+    console.log('ionViewDidEnter SecondPage');
+  }
+
+  ionViewWillLeave() {
+    console.log('ionViewWillLeave SecondPage');
+  }
+
+  ionViewDidLeave() {
+    console.log('ionViewDidLeave SecondPage');
+  }
+
+  ionViewWillUnload() {
+    console.log('ionViewWillUnload SecondPage');
+  }
+
+
 
 }
