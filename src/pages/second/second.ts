@@ -16,6 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class SecondPage {
 
   msg:string;
+  pageCanLeave:boolean = true;
 
   constructor(private navCtrl: NavController, private navParams: NavParams) {
     this.msg = this.navParams.get('message');
@@ -59,6 +60,12 @@ export class SecondPage {
     console.log('ionViewWillUnload SecondPage');
   }
 
+  togglePageCanLeave(){
+    this.pageCanLeave = !this.pageCanLeave;
+  }
 
+  ionViewCanLeave(){
+    return this.pageCanLeave;
+  }
 
 }
